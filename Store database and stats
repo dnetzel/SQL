@@ -1,0 +1,27 @@
+-- create store database
+
+CREATE TABLE store (id integer primary key, item text, price numeric, season text, vendor text);
+
+insert into store values (001, "White Shirt", 5.00, "Summer", "Lulus");
+insert into store values (002, "Black Shoes", 7.00, "Fall", "The North Face");
+insert into store values (003, "Gloves", 8.00, "Winter", "Walmart");
+insert into store values (004, "Umbrella", 19.00, "Winter", "Walmart");
+insert into store values (005, "bike", 101.00, "summer", "Walmart");
+insert into store values (006, "frufrus", 1.00, "summer", "claires");
+insert into store values (007, "pants", 30.00, "Fall", "Lulus");
+insert into store values (008, "glasses", 40.00, "summer", "Walmart");
+insert into store values (009, "soda", 1.00, "summer", "Walmart");
+insert into store values (010, "onesie", 8.00, "Fall", "JCPenny");
+insert into store values (011, "Armor", 300.00, "Winter", "GoT");
+insert into store values (012, "Monitor", 299.00, "Fall", "GoT");
+insert into store values (013, "tanktop", 14.00, "Summer", "Lulus");
+insert into store values (014, "Fork", 10.00, "Fall", "Walmart");
+insert into store values (015, "Tinkerbell", 25.00, "Summer", "Disney");
+
+-- display database 
+
+SELECT * FROM store ORDER BY price desc;
+
+-- What is the averageprice from vendor Walmart? 
+
+SELECT avg(price) from store where vendor = "Walmart";
